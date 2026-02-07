@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsTestProject>true</IsTestProject>
+    <AssemblyName>PersonalFinance.Finance.Domain.Application</AssemblyName>
+    <RootNamespace>PersonalFinance.Finance.Domain.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Bogus" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\service\Finance\PersonalFinance.Finance.Application\PersonalFinance.Finance.Application.csproj" />
+  </ItemGroup>
+</Project>
+

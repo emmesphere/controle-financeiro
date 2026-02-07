@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>PersonalFinance.Finance.Domain</AssemblyName>
+    <RootNamespace>PersonalFinance.Finance.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>PersonalFinance.Finance.Application</AssemblyName>
+    <RootNamespace>PersonalFinance.Finance.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PersonalFinance.Finance.Domain\PersonalFinance.Finance.Domain.csproj" />
+    <ProjectReference Include="..\..\..\shared\PersonalFinance.BuildingBlocks.Abstractions\PersonalFinance.BuildingBlocks.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\shared\PersonalFinance.BuildingBlocks.Validation\PersonalFinance.BuildingBlocks.Validation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+  </ItemGroup>
+</Project>

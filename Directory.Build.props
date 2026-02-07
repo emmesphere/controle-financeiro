@@ -1,0 +1,27 @@
+<Project>
+  <PropertyGroup>
+    <!-- .NET -->
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- Qualidade / Build -->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors>nullable</WarningsAsErrors>
+
+    <!-- Para builds reprodutíveis em CI -->
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+
+    <!-- Opcional: gera xml docs (bom para libs/shared) -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn> <!-- Suprime warning de XML docs faltando -->
+  </PropertyGroup>
+
+  <!-- Padrões úteis para testes/infra -->
+  <PropertyGroup Condition="'$(IsTestProject)' == 'true'">
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+</Project>
